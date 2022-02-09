@@ -1,0 +1,149 @@
+Uma@DESKTOP-T2ESEI2 MINGW64 ~
+$ cd E:
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e
+$ cd trainig
+bash: cd: trainig: No such file or directory
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e
+$ cd training
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training
+$ cd gitsession
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession (book)
+$ mkdir assign
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession (book)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession (master)
+$ cd assign
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git init
+Initialized empty Git repository in E:/Training/gitsession/assign/.git/
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ touch aaa.sh
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ rm aaa.sh
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ ls
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ aaa.txt
+bash: aaa.txt: command not found
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ touch aaa.txt
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ cat >> aaa.txt
+hello, busy in doing assignments
+
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ cat aaa.txt
+hello, busy in doing assignments
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aaa.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ cat >> aaa.txt
+now doing 2nd ques
+
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git commit -m "adding a line"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aaa.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git add -all
+error: did you mean `--all` (with two dashes)?
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git add --all
+warning: LF will be replaced by CRLF in aaa.txt.
+The file will have its original line endings in your working directory
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   aaa.txt
+
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git status --short
+A  aaa.txt
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ cat aaa.txt
+hello, busy in doing assignments
+now doing 2nd ques
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ cat >> aaa.txt
+now good evening
+
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git commit -a -m "adding more lines"
+warning: LF will be replaced by CRLF in aaa.txt.
+The file will have its original line endings in your working directory
+[master (root-commit) 8631b8e] adding more lines
+ 1 file changed, 3 insertions(+)
+ create mode 100644 aaa.txt
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git log
+commit 8631b8ec6073f49474a2932c470ba5f766e264b8 (HEAD -> master)
+Author: SAHIL <SAHILmehta973@gmail.com>
+Date:   Mon Jan 31 19:24:56 2022 +0530
+
+    adding more lines
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (master)
+$ git checkout -b even
+Switched to a new branch 'even'
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (even)
+$ git branch weme
+
+Uma@DESKTOP-T2ESEI2 MINGW64 /e/training/gitsession/assign (even)
+$ git branch
+* even
+  master
+  weme
+

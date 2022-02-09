@@ -1,0 +1,214 @@
+public class PrintArray {  
+    public static void main(String[] args) {  
+        //Initialize array  
+        int [] arr = new int [] {1, 2, 3, 4, 5};  
+        System.out.println("Elements of given array: ");  
+        //Loop through the array by incrementing value of i  
+        for (int i = 0; i < arr.length; i++) {  
+            System.out.print(arr[i] + " ");  
+        }  
+    }  
+}  
+
+
+public class ArrayAverage {
+ 
+    public static void main(String[] args) {
+ 
+        // create an array
+        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+ 
+        // getting array length
+        int length = array.length;
+ 
+        // default sium value.
+        int sum = 0;
+ 
+        // sum of all values in array using for loop
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+ 
+        double average = sum / length;
+         
+        System.out.println("Average of array : "+average);
+ 
+    }
+ 
+}
+
+
+class Main {
+  public static void main(String[] args) {
+      
+    // create an array
+    int[] numbers = {3, 9, 5, -5};
+    
+    // for each loop 
+    for (int number: numbers) {
+      System.out.println(number);
+    }
+  }
+}
+
+
+Convert char Array to String
+class convert {
+ 
+    
+    public static String toString(char[] a)
+    {
+        // Creating object of String class
+        String string = new String(a);
+ 
+        return string;
+    }
+ 
+    // Main driver method
+    public static void main(String args[])
+    {
+ 
+        // Character array
+        char s[] = { 'g', 'e', 'e', 'k', 's', 'f', 'o',
+                     'r', 'g', 'e', 'e', 'k', 's' };
+ 
+        // Printing converted string from character array
+        System.out.println(toString(s));
+    }
+}
+
+ public static void main(String[] args) {
+        int rows = 2, columns = 3;
+        int[][] firstMatrix = { {2, 3, 4}, {5, 2, 3} };
+        int[][] secondMatrix = { {-4, 5, 3}, {5, 6, 3} };
+
+        // Adding Two matrices
+        int[][] sum = new int[rows][columns];
+        for(int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
+            }
+        }
+
+        // Displaying the result
+        System.out.println("Sum of two matrices is: ");
+        for(int[] row : sum) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+import java.util.Arrays;
+ 
+// Main class
+public class GFG {
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+ 
+        // Get the Array
+        int intArr[] = { 10, 20, 15, 22, 35 };
+ 
+        Arrays.sort(intArr);
+ 
+        int intKey = 22;
+ 
+        // Print the key and corresponding index
+        System.out.println(
+            intKey + " found at index = "
+            + Arrays.binarySearch(intArr, intKey));
+    }
+}
+
+import java.util.Arrays;
+ 
+// Main class
+public class GFG {
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+ 
+        // Get the Array
+        int intArr[] = { 10, 20, 15, 22, 35 };
+ 
+        Arrays.sort(intArr);
+ 
+        int intKey = 22;
+ 
+        // Print the key and corresponding index
+        System.out.println(
+            intKey + " found at index = "
+            + Arrays.binarySearch(intArr, intKey));
+    }
+}
+
+public class SmallestElement_array {  
+    public static void main(String[] args) {  
+  
+        //Initialize array  
+        int [] arr = new int [] {25, 11, 7, 75, 56};  
+        //Initialize min with first element of array.  
+        int min = arr[0];  
+        //Loop through the array  
+        for (int i = 0; i < arr.length; i++) {  
+            //Compare elements of array with min  
+           if(arr[i] <min)  
+               min = arr[i];  
+        }  
+        System.out.println("Smallest element present in given array: " + min);  
+    }  
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
