@@ -1,0 +1,60 @@
+abstract class Beverages {
+	abstract void addIngredient();
+	void addMilk() {
+		System.out.println("Add Milk");
+	}
+}
+class Tea extends Beverages {
+
+	void addIngredient() {
+		System.out.println("Add Tea");
+	}
+}
+
+class Coffee extends Beverages {
+	void addIngredient() {
+		System.out.println("Add Coffee");
+	}
+}
+public class AbstractEx{
+	public static void main(String[] args) {
+		Coffee c=new Coffee();
+		Tea t=new Tea();
+		c.addMilk();
+		t.addIngredient();
+		c.addIngredient();
+		
+		}
+
+	}
+
+
+public class Employees {
+	public void EmpDetails(String EmpName,int EmpCode,float salary,){
+		System.out.println(EmpName+" "+EmpCode+" "+salary);
+		
+	}
+public static void main(String[] args) {
+	Employees[] e= new Employees[100];
+e[0]=new Employees();	
+e[1]=new Employees();	
+e[2]=new Employees();
+e[3]=new Employees();
+e[4]=new Employees();
+e[5]=new Employees();
+e[6]=new Employees();	
+e[0].EmpDetails("Uma",101,11222.1212f);
+e[1].EmpDetails("saumya",102,2133124.0f);
+e[2].EmpDetails("skand",104,1432.0f);
+e[3].EmpDetails("vishal",105,3276276.939f);
+e[4].EmpDetails("sangeeta",106,323213.132f);
+e[5].EmpDetails("shubhi",107,24233.343f);
+e[6].EmpDetals("ritika",108,34234.54654f);
+}
+}
+
+}
+}
+
+}
+}
