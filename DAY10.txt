@@ -1,0 +1,45 @@
+BUBBLE SORT--------------------------------------------------------------------------------------------------------------
+begin BubbleSort(list)
+
+   for all elements of list
+      if list[i] > list[i+1]
+         swap(list[i], list[i+1])
+      end if
+   end for
+   
+   return list
+   
+end BubbleSort
+
+INSERTION SORT------------------------------------------------------------------------------------
+
+Step 1 - If the element is the first element, assume that it is already sorted. Return 1.
+
+Step2 - Pick the next element, and store it separately in a key.
+
+Step3 - Now, compare the key with all elements in the sorted array.
+
+Step 4 - If the element in the sorted array is smaller than the current element, then move to the next element. Else, shift greater elements in the array towards the right.
+
+Step 5 - Insert the value.
+
+Step 6 - Repeat until the array is sorted.
+
+MERGE SORT----------------------------------------------------------------------------------------------------------
+Step 1 − if it is only one element in the list it is already sorted, return.
+Step 2 − divide the list recursively into two halves until it can no more be divided.
+Step 3 − merge the smaller lists into new list in sorted order.
+
+
+
+
+
+QUICK SORT----------------------------------------------------------------------------------------------------------
+Step 1 − Choose the highest index value has pivot
+Step 2 − Take two variables to point left and right of the list excluding pivot
+Step 3 − left points to the low index
+Step 4 − right points to the high
+Step 5 − while value at left is less than pivot move right
+Step 6 − while value at right is greater than pivot move left
+Step 7 − if both step 5 and step 6 does not match swap left and right
+Step 8 − if left ≥ right, the point where they met is new pivot
