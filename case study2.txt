@@ -1,0 +1,81 @@
+abstract class Item
+{
+private char id_no ;
+private char title; 
+private int noofcopies;
+void item()
+{
+  System.out.println("welcome");
+}
+
+public int id_no ()
+{    return id_no;
+}
+public char title(){
+return title;
+}
+public int noofcopies(){
+return noofcopies;
+}
+}
+abstract class WrittenItem extends Item
+{
+private int author_id;
+void print (){ };
+}
+class Book extends WrittenItem{
+void print (){
+    System.out.println("I am written in english language");
+    };
+}
+class JournalPaper extends WrittenItem
+{
+    private int year_published;
+        void print ()
+{
+    System.out.println("I am written in Ms word ");
+
+}
+}
+abstract class MediaItem extends Item
+{ private int runtime;
+abstract void where(){ };
+void getdata()
+{
+    System.out.println("I am  Media Items section");
+}
+}
+public class Video extends MediaItem
+{
+private char director;
+private char genre;
+private char year_released;
+void where (){
+    System.out.println("I am in third floor");
+}
+void print()
+{
+System.out.println("I am video class");
+}
+}
+
+public class CD.5.1 extends MediaItem
+{
+private char artist_name;
+private int artist_no;
+private char genre;
+void where ()
+   { System.out.println("My packging is in plastic");}
+
+void getprint(){
+
+{ System.out.println("I am CD.5.1");} }
+
+public class Library {
+
+   public static void main(String args[]) {
+       
+
+}
+
+}
