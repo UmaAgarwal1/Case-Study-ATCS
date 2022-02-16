@@ -1,0 +1,167 @@
+Question 1 
+
+public class ArrayListEx {
+
+	public static void main(String[] args) {
+		ArrayList a=new ArrayList();
+		a.add("Uma");
+		a.add(6565);
+		a.add(False);
+		a.add(211.999f);
+		System.out.println(a);
+	}
+}
+
+Question 2
+
+public class LinkedListEx1 {
+	public static void main(String[] args) {
+		
+	
+LinkedList l=new LinkedList();
+l.add(99999);
+l.add("Hii");
+l.add(null);
+l.add(true);
+System.out.println(l);
+
+}
+}
+
+Question 3
+
+public class LinkedListEx {
+	public static void main(String[] args) {
+		
+	
+LinkedList l=new LinkedList();
+l.add(123);
+l.add("Hello");
+l.add(null);
+l.add(true);
+System.out.println(l.isEmpty());
+System.out.println(l.size());
+System.out.println(l.remove());
+System.out.println(l.contains(null));
+System.out.println(l.getFirst());
+
+}
+}
+
+
+Question 4
+
+public class Test {
+public static void main(String[] args) {
+	ArrayList a=new ArrayList();
+	a.add("Uma");
+	a.add(1000);
+	a.add(false);
+	a.add(99.000f);
+	System.out.println("Using for loop");
+	for(int i=0;i<a.size();i++) {
+		System.out.println(a.get(i));
+	}System.out.println("Using for each loop");
+	for(Object obj:a) {
+		System.out.println(obj);
+	}
+}
+}
+
+Question 5
+
+public class GenericEx {
+public static void main(String[] args) {
+	ArrayList<Integer> a=new <Integer> ArrayList();
+	//adding element to array list
+for(int i=1;i<=10;i++) {
+	a.add(i);
+}
+//printing even numbers
+for(Object obj:a) {
+ Integer o=(Integer)obj;
+	if(o%2==0) {
+		System.out.println(obj);
+	}
+}
+}
+}
+
+
+Question 6
+
+public static void main(String[] args) {
+	ArrayList <Integer>a=new ArrayList();
+	
+	
+	a.add(1);
+	a.add(23);
+	a.add(12);
+	a.add(11);
+	Iterator i=a.iterator();
+	while(i.hasNext()) {
+		System.out.println(i.next());
+	}
+	
+}
+}
+
+Question 7
+
+public static void main(String[] args) {
+	LinkedList<Character> l=new LinkedList();
+	l.add('a');
+	l.add('b');
+	l.add('c');
+	l.add('d');
+	l.add('e');
+	ListIterator li=l.listIterator();
+	while(li.hasNext()) {
+		System.out.println(li.next());
+		
+	}
+	while(li.hasPrevious()) {
+		System.out.println(li.previous());
+	}
+	}
+}
+
+                                  
+	
+	
+	
+Question 6
+
+public class PriorityQEx {
+public static void main(String[] args) {
+	
+	PriorityQueue<String> pr= new  PriorityQueue<String>();
+	
+	pr.add("jaipur");
+	pr.add("is");
+	pr.add("the");
+	pr.add("best");
+	pr.add("Day");
+	
+	
+	System.out.println(pr);
+	
+}
+}
+	
+
+Question 7
+
+
+public class TreeSetEx {
+public static void main(String[] args) {
+	TreeSet <Character>tr=new TreeSet();
+	tr.add('T');
+	tr.add('R');
+	tr.add('E');
+	tr.add('E');
+	tr.add('S');
+	System.out.println(tr);
+}
+}
+		
