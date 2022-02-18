@@ -1,0 +1,52 @@
+Question 1
+
+public class Demo {
+public static void main(String[] args) throws IOException {
+	File f=new File("xyz.txt");
+	f.createNewFile();
+	System.out.println("File is created");}
+}
+
+Question 2
+
+public class Demo {
+public static void main(String[] args) throws IOException {
+	File f1=new File("File Folder");
+	File f=new File("xyz.txt");
+	f1.mkdir();
+	System.out.println("Folder is created");
+	f.createNewFile();
+	System.out.println("File is created");}
+}
+Question 3
+
+public class FileWriterEx {
+public static void main(String[] args) throws IOException {
+	FileWriter fp=new FileWriter("xyz.txt");
+	fp.write("Hello!");
+	fp.write("Welcome");
+	fp.write("to");
+	fp.write("Atcs");
+	fp.write(23);
+	fp.close();
+	System.out.println("Writing in file using file writer");
+}
+}
+Question 4
+
+public class BufferWriterEx {
+public static void main(String[] args) throws IOException {
+	FileWriter fp=new FileWriter("xyz.txt");
+	BufferedWriter bp=new BufferedWriter(fp);
+	bp.write("Hello!");
+	bp.write("Welcome");
+	bp.write("to");
+	bp.write("Atcs");
+	bp.write(23);
+	bp.write(56);
+	bp.close();
+	System.out.println("Writing in file using buffer writer");
+}
+}
+
+               
