@@ -81,7 +81,7 @@ public class HashSetGeneric {
 		   System.out.println(h);
 		}}
                                                                
- Question 5
+ Question 6
 
 public class KeySetEx {
 public static void main(String[] args) {
@@ -96,7 +96,7 @@ public static void main(String[] args) {
 	}
 	}
 }
-Question 6
+Question 7
 public class EntrySetEx {
 public static void main(String[] args) {
 	HashMap<Integer,String> h=new HashMap();
