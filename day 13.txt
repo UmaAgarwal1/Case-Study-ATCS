@@ -1,0 +1,73 @@
+                         
+Question 1
+
+public class Divide {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter two numbers");
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int div=a/b;
+	System.out.println("Divide of two nos "+div);
+}
+}
+
+Question 2
+public class DivideTryCatch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter two numbers");
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		try {
+		int div=a/b;
+		System.out.println("Divide of two nos "+div);}
+		catch(ArithmeticException ae){
+			System.out.println("Please enter valid denominator");
+		}
+		
+}}
+
+
+Question 3
+public class MultiCatch {
+public static void main(String[] args) {
+	try {
+	int arr[]=new int[10];
+	arr[10]=20/10;
+	arr[0]=9/0;
+	System.out.println(arr[10]);
+	}
+	catch(ArithmeticException ae) {
+		System.out.println("cannot divide by zero");
+	}
+	catch(ArrayIndexOutOfBoundsException ab) {
+		System.out.println("please enter valid index");
+	}
+	catch(Exception e) {
+		System.out.println("there is an exception");
+	}
+	finally {
+		System.out.println("program is executed");
+	}
+} 
+}
+      
+                                                                    
+ 
+ Question 4
+public class Marks {
+public void validMarks(int marks) {
+	if (marks>40) {
+		throw new ArithmeticException("You passed the exam!");
+	}
+	else {
+		
+		System.out.println("You failed the exam!");
+	}
+}
+public static void main(String[] args) {
+	Marks m=new Marks();
+	m.validMarks(45);
+}
+}
