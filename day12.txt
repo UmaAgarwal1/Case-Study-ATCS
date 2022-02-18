@@ -1,0 +1,113 @@
+Question 1
+public class HashSetEx {
+public static void main(String[] args) {
+	HashSet h=new HashSet();
+	for(int i=0;i<10;i++) {
+		h.add(i);
+	}
+	h.add(5);
+	System.out.println(h);
+}
+}
+Question 2
+
+public class LinkedHashSetEx {
+public static void main(String[] args) {
+	LinkedHashSet l =new LinkedHashSet();
+	for(int i=0;i<10;i++) {
+		l.add(i);
+	}
+	l.add("Hello");
+	l.add(5);
+	l.add(true);
+	System.out.println(l);
+}
+}
+
+Question 3
+public class HashSetIterator {
+	
+    public static void main(String[] args) {
+		HashSet h=new HashSet();
+		h.add(3);
+		h.add(2.7f);
+		h.add(5.09);
+		h.add("Hii");
+	Iterator i=h.iterator();
+	while(i.hasNext()) {
+		System.out.println(i.next());}
+	}
+	}
+
+
+Question 4
+
+public class LinkedHashIter {
+	
+	public static void main(String[] args) {
+		LinkedHashSet l =new LinkedHashSet();
+		for(int i=0;i<10;i++) {
+			l.add(i);
+		}
+		l.add("Hii!");
+	    Iterator i=l.iterator();
+	    while(i.hasNext()) {
+	    	
+		System.out.println(i.next());
+	}
+	}
+
+}
+
+
+Question 5        
+
+public class HashSetGeneric {
+	
+  public static void main(String[] args) {
+			HashSet <String>h=new HashSet();
+			HashSet <String>h1=new HashSet();
+			h.add("Hii!");
+			h.add("Good");
+			h.add("morning");
+			h1.add("Hello");
+			h1.add("Bye");
+			h.addAll(h1);
+			System.out.println(h);
+			
+		   h.remove("Bye");
+		   System.out.println(h);
+		   h.retainAll(h1);
+		   System.out.println(h);
+		}}
+                                                               
+ Question 1
+
+public class KeySetEx {
+public static void main(String[] args) {
+	HashMap<Integer,String> h=new HashMap();
+	h.put(1001, "Uma");
+	h.put(2001, "Agarwal");
+	h.put(3002, "Atcs");
+	Set <Integer> s=h.keySet();
+	Iterator i=s.iterator();
+	while(i.hasNext()) {
+		System.out.println(i.next());
+	}
+	}
+}
+Question 2
+public class EntrySetEx {
+public static void main(String[] args) {
+	HashMap<Integer,String> h=new HashMap();
+	h.put(123, "Uma");
+	h.put(321, "Agarwal");
+	h.put(213, "Atcs");
+	Set <Entry<Integer,String>> s=h.entrySet();
+	Iterator i=s.iterator();
+	while(i.hasNext()) {
+		System.out.println(i.next());
+	}
+}
+}
+
