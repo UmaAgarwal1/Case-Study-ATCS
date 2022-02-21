@@ -1,0 +1,147 @@
+//The product Program
+
+package himank;
+
+import java.util.Scanner;
+
+public class Product {
+		
+		//encapsulated members
+	    private int id;
+	    private String name;
+	    private int amount;
+	    private String address;
+	    private int pincode;
+	    
+	    //default constructor
+	    public Product()
+	    {
+	     
+	    }
+	    public Product(int id,String name,int amount,String address,int pincode) {
+	    	this.id=id;
+	    	this.name=name;
+	    	this.amount=amount;
+	    	this.address=address;
+	    	this.pincode=pincode;
+	    }
+	    
+	    //getters and setters for private members
+		public int getId() {
+			return id;}
+		public void setId(int id) {
+			this.id = id;}
+		public String getName() {
+			return name;}
+		public void setName(String name) {
+			this.name = name;}
+		public int getAmount() {
+			return amount;}
+		public void setAmount(int amount) {
+			this.amount = amount;}
+		public String getAddress() {
+			return address;}
+		public void setAddress(String address) {
+			this.address = address;}
+		public int getPincode() {
+			return pincode;}
+		public void setPincode(int pincode) {
+			this.pincode = pincode;}
+		public void Add() {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter the id:");
+			id=sc.nextInt();
+			System.out.println("Enter the name:");
+			name=sc.next();
+			System.out.println("Enter the amount:");
+			amount=sc.nextInt();
+			System.out.println("Enter the address without space:");
+			address=sc.next();
+			System.out.println("Enter the pincode");
+			pincode=sc.nextInt();
+			System.out.println("Data Entered Successfully");
+			sc.close();
+		}
+
+public static void main(String[] args) {
+     Product p=new Product();
+     //p.Add();
+     Operations o=new Operations();
+     System.out.println(o.getProduct(45));
+}
+}
+
+
+
+
+
+
+//Hashmap program
+
+package himank;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Hashmap {
+     
+	private static Map<Integer, Product> products=new HashMap<>();
+
+    public static Map<Integer, Product> getProduct()
+    {
+        return products;
+    }
+
+}
+
+
+
+
+
+
+//Operations program
+
+package himank;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class Operations{
+private Map<Integer, Product> products=Hashmap.getProduct();
+
+
+//To Add the products 
+public Product addProduct(Product product) {
+  product.setId(products.size()+1);
+  products.put((Integer) product.getId(), product);
+  return product;
+}
+
+//Update the product
+public Product updateProduct(Product product) {
+  if(product.getId()<=0)
+  {
+      return null;
+  }
+  products.put((Integer) product.getId(), product);
+  return product;
+}
+
+//Delete the product
+public Product deleteProduct(Integer id) {
+
+ return products.remove(id);
+}
+
+//Get product
+public Product getProduct(Integer id) {
+
+  return products.get(id);
+}
+
+//Get All products
+public List<Product> getAllProducts() {
+
+  return new ArrayList<Product>(products.values());
+}
+}
