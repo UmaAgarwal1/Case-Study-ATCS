@@ -1,52 +1,169 @@
 Question 1
 
-public class Demo {
-public static void main(String[] args) throws IOException {
-	File f=new File("xyz.txt");
-	f.createNewFile();
-	System.out.println("File is created");}
+package javafundamentals;
+class demo1 extends Thread
+{
+	public void run () {
+		System.out.println("thread");
+	}
+}
+public class demo {
+	public static void main(String[] args) {
+	
+		demo1 d=new demo1();
+		
+		d.start();
+		System.out.println("uma");
+	}
 }
 
 Question 2
 
-public class Demo {
-public static void main(String[] args) throws IOException {
-	File f1=new File("File Folder");
-	File f=new File("xyz.txt");
-	f1.mkdir();
-	System.out.println("Folder is created");
-	f.createNewFile();
-	System.out.println("File is created");}
+package javafundamentals;
+class demo1 extends Thread
+{
+	public void run () {
+		System.out.println("thread");
+		System.out.println("incoming     "+Thread.currentThread().getName());
+        Thread.currentThread().setName("agarwal");
+		System.out.println(Thread.currentThread().getName());
+	}
 }
+public class demo {
+	public static void main(String[] args) {
+	
+		demo1 d=new demo1();
+		
+		d.start();
+		System.out.println("uma");
+	}
+}
+
 Question 3
 
-public class FileWriterEx {
-public static void main(String[] args) throws IOException {
-	FileWriter fp=new FileWriter("xyz.txt");
-	fp.write("Hello!");
-	fp.write("Welcome");
-	fp.write("to");
-	fp.write("Atcs");
-	fp.write(23);
-	fp.close();
-	System.out.println("Writing in file using file writer");
+package javafundamentals;
+class demo1 extends Thread
+{
+	public void run () {
+		System.out.println("thread");
+		System.out.println("incoming     "+Thread.currentThread().getName());
+        Thread.currentThread().setName("agarwal");
+		System.out.println(Thread.currentThread().getName());
+		System.out.println(Thread.currentThread().getPriority());
+		Thread.currentThread().setPriority(MIN_PRIORITY);
+		System.out.println(Thread.currentThread().getPriority());
+	}
 }
-}
+public class demo {
+	public static void main(String[] args) {
+	
+		demo1 d=new demo1();
+		
+		d.start();
+		System.out.println("uma");
+		System.out.println();
+		System.out.println(Thread.currentThread().getPriority());
+		Thread.currentThread().setPriority(2);
+		System.out.println(Thread.currentThread().getPriority());
+	}
+	}
+
 Question 4
-
-public class BufferWriterEx {
-public static void main(String[] args) throws IOException {
-	FileWriter fp=new FileWriter("xyz.txt");
-	BufferedWriter bp=new BufferedWriter(fp);
-	bp.write("Hello!");
-	bp.write("Welcome");
-	bp.write("to");
-	bp.write("Atcs");
-	bp.write(23);
-	bp.write(56);
-	bp.close();
-	System.out.println("Writing in file using buffer writer");
+package javafundamentals;
+class demo1 extends Thread
+{
+	public void run () {
+		for (int i = 0; i<=10; i++) {
+			
+		
+		System.out.println("thread");
+		
+		
+	}}
 }
+public class demo {
+	public static void main(String[] args) {
+	
+		demo1 d=new demo1();
+		
+		d.start();
+		for (int i = 0; i < 10; i++) {
+			
+		
+		System.out.println("uma");
+        Thread.yield();
+		
+	}}
+}
+Question 5 
+package javafundamentals;
+class demo1 extends Thread
+{
+	public void run () {
+		for (int i = 0; i<=10; i++) {
+			
+		
+		System.out.println("thread");
+		
+		
+	}}
+}
+public class demo {
+	public static void main(String[] args) {
+	
+		demo1 d=new demo1();
+		
+		d.start();
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		System.out.println("uma");
+        
+		
+	}}
+}
+ Question 6
+package javafundamentals;
+class demo1 extends Thread
+{
+	public void run () {
+		for (int i = 0; i<=10; i++) {
+			
+		
+		System.out.println("thread");
+		
+		
+	}}
+}
+public class demo {
+	public static void main(String[] args) {
+	
+		demo1 d=new demo1();
+		
+		d.start();
+			try {
+				d.join(4000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		for (int i = 0; i < 10; i++) {
+			
+		
+		System.out.println("uma");
+        
+		
+	}}
 }
 
-               
+
+
+
+
+
+
