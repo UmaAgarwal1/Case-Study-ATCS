@@ -1,0 +1,221 @@
+Question 1
+
+package lambda;
+import java.util.function.Predicate;
+public class Predicatenumber {
+    public static void main(String[] args)
+    {
+         Predicate<Integer> even= i->i%2==0;
+         System.out.println(even.test(9)); 
+    }
+}
+
+Question 2
+ 
+
+package lambda;
+import java.util.function.Predicate;
+public class predictstring {
+	public static void main(String[] args) {
+		Predicate<String> length=s->s.length() > 5;
+		System.out.println(length.test("uma"));
+	}
+	
+
+}
+   
+
+
+Question 3
+
+
+package lambda;
+
+interface Square{
+	void abstractSquare(int x);
+	  
+    
+}
+
+public class SquareRoot implements Square{  
+    public static void main(String[] args) {  
+    	Square s =(int x)->System.out.println(x*x);
+		s.abstractSquare(4); 
+    }
+
+	@Override
+	public void abstractSquare(int x) {
+		// TODO Auto-generated method stub
+		System.out.println("hello");
+	}  
+}  
+
+
+
+Question 4
+
+package lambda;
+
+interface addition 
+{
+	void plus(int x,int y);
+
+}
+class add implements addition
+{
+	public static void main(String[] args) {
+		addition add=(int x,int y)->System.out.println(x+y);
+		add.plus(2,4);
+	}
+
+	@Override
+	public void plus(int x, int y) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	}
+
+
+Question 5
+
+package lambda;
+
+public class Runnableinterface {
+		public static void main(String[] args) {
+			
+			Runnable r=()->{
+				
+				for (int i = 0; i <10; i++) {
+					try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					System.out.println("child thread");
+				}
+			};
+			
+			Thread t= new Thread(r);
+			t.start();
+			
+			for (int i = 0; i <10; i++) {
+				Thread.currentThread().getName();
+				System.out.println("main thread");
+			}
+		}
+}
+
+
+Question 6
+
+
+package lambda;
+
+import java.util.ArrayList;
+
+public class Array {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(5);
+    numbers.add(9);
+    numbers.add(8);
+    numbers.add(1);
+    numbers.forEach( (n) -> { System.out.println(n); } );
+  }
+}
+
+
+Question 7
+
+package lambda;
+
+interface van {
+	 void yy(String s) ;
+}
+abstract class lambdaBlock implements van
+{ public static void main(String[] args) {
+	
+
+	van v=(s)->{System.out.println("the word is :"+s);};
+	v.yy("kk");
+	
+}	
+}
+
+
+Question 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
