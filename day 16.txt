@@ -149,7 +149,47 @@ abstract class lambdaBlock implements van
 Question 8
 
 
+package lambda;
+//Create a employee class with ArrayList 
+//class add key value pair name,salary, findout salary>7000?
+import java.util.*;
+import java.util.function.Predicate;
+ class Employee {
+	String ename;
+	int esalary;
+	Employee(String ename,int esalary)
+	{
+		this.ename=ename;
+		this.esalary=esalary;
 
+	}
+	public String toString() {
+		return ename+" "+esalary;
+	}
+	
+}
+public class emp{
+	
+public static void main(String[] args) {
+	
+	
+	ArrayList<Employee> ar= new ArrayList<Employee>();
+	
+	ar.add(new Employee("shreya",1211));
+	ar.add(new Employee("bdwhbd",2321));
+	ar.add(new Employee("preya",2535));
+	ar.add(new Employee("dwhdb",63636000));
+	
+	System.out.println(ar);
+	for(Employee e: ar)
+	{
+		Predicate<Employee> p2 = a -> e.esalary > 70000;
+		System.out.println(p2.test(e));
+	}
+	
+	
+}
+}
 
 
 
