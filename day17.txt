@@ -1,0 +1,124 @@
+Question 1 and 2
+ostgres=# create database Student;
+CREATE DATABASE
+postgres=# \c student;
+You are now connected to database "student" as user "postgres".
+           
+student=# create table details(stname varchar(5),sid int);
+CREATE TABLE
+
+student=# \d details
+                     Table "public.details"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ sname  | character varying(5) |           |          |
+ sid    | integer               |           |          |
+
+
+
+student=# alter table details add column rollno int;
+ALTER TABLE
+
+alter table details rename stname to name;
+ALTER TABLE
+
+student=# alter table details alter column rollno type varchar(10);
+ALTER TABLE
+
+student=# \d details
+                     Table "public.details"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ name   | character varying(5) |           |          |
+ sid    | integer               |           |          |
+ rollno | character varying(10) |           |          |
+
+
+
+student=# insert into details values('uma',1,'124');
+INSERT 0 1
+student=# insert into details values('sid',2,'123');
+INSERT 0 1
+student=# select * from details;
+ name  | sid | rollno
+-------+-----+--------
+ uma |  1 | 124
+ sid |  2 | 123
+(2 rows)
+
+
+
+student=# update details set name='tanu' where sid=123;
+UPDATE 
+student=# select * from details;
+ name  | sid | rollno
+-------+-----+--------
+ uma |  1 | 124
+ jiya  |  2 | 123
+(2 rows)
+
+
+student=# truncate table details;
+TRUNCATE TABLE
+student=# \d details;
+                     Table "public.details"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ name   | character varying(5) |           |          |
+ sid    | integer               |           |          |
+ rollno | character varying(10) |           |          |
+
+
+student=# select * from details;
+ name | sid | rollno
+------+-----+--------
+(0 rows)
+
+
+
+student=# create table employee(eid int not null,ename varchar(12),empSal int);
+CREATE TABLE
+student=# create table manager(mid int not null,mgdept varchar(12),mgcode int);
+CREATE TABLE
+
+student=# insert into employee values(11,'ram',10000);
+INSERT 0 1
+student=# insert into employee values(15,'Sita',40000);
+INSERT 0 1
+student=# insert into employee values(19,'Sam',4000);
+INSERT 0 1
+student=# insert into employee values(29,'nita',87000);
+INSERT 0 1
+
+student=# insert into manager values(23,'management',7000);
+INSERT 0 1
+student=# insert into manager values(29,'Accounts',7004);
+INSERT 0 1
+student=# insert into manager values(11,'training',8004);
+INSERT 0 1
+
+student=# select * from employee;
+ eid | ename | empsal
+-----+-------+--------
+  11 | ram   |  10000
+  15 | Sita  |  40000
+  19 | Sam   |   4000
+  29 | nita  |  87000
+(4 rows)
+
+student=# select * from manager;
+ mid |   mgdept   | mgcode
+-----+------------+--------
+  23 | management |   7000
+  29 | Accounts   |   7004
+  11 | training   |   8004
+(3 rows)
+
+
+
+//equi join
+student=# select e.eid,e.ename,e.empsal,m.mgdept,m.mgcode from employee e,manager m where e.eid=m.mid;
+ eid | ename | empsal |  mgdept  | mgcode
+-----+-------+--------+----------+--------
+  11 | ram   |  10000 | training |   8004
+  29 | nita  |  87000 | Accounts |   7004
