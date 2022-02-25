@@ -1,0 +1,108 @@
+ JDBC
+   
+   //creating table
+   
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Demo {
+public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	
+	Class.forName("org.postgresql.Driver");
+	Connection conn=DriverManager.getConnection("jdbc:postgresql://localhost/student", "postgres", "password");
+	Statement stmt=conn.createStatement();
+	boolean r=stmt.execute("create table student(name varchar(10),rollno int)");
+	System.out.println("Table Created");
+}
+}
+
+//inserting values in table
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Demo1 {
+public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	Class.forName("org.postgresql.Driver");
+	Connection conn=DriverManager.getConnection("jdbc:postgresql://localhost/student","postgres","password");
+     Statement stmt=conn.createStatement();
+     int result=stmt.executeUpdate("insert into student values('john',8090)");
+     stmt.executeUpdate("insert into student values('sita',1010)");
+     stmt.executeUpdate("insert into student values('sam',2020)");
+     System.out.println("inserted");
+}
+}
+
+//updating table data
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Demo2 {
+public static void main(String[] args) throws SQLException, ClassNotFoundException {
+	Class.forName("org.postgresql.Driver");
+	Connection con=DriverManager.getConnection("jdbc:postgresql://localhost/student","postgres","password");
+	Statement stmt=con.createStatement();
+	int result=stmt.executeUpdate("update student set name='ram' where rollno=8090");
+	System.out.println("Updated");
+}
+}
+
+//Print table data on console
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Demo3 {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		Class.forName("org.postgresql.Driver");
+		Connection con=DriverManager.getConnection("jdbc:postgresql://localhost/student","postgres","password");
+		Statement stmt=con.createStatement();
+		ResultSet result=stmt.executeQuery("select * from student");
+		while(result.next()) {
+		System.out.println(result.getString(1)+" "+result.getInt(2));
+	}
+}}
+
+                                                              
+                                                              
+ create a class with end-user implementation scanner class, username and password matching or not otherwise it will give an error.
+ import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class PasswordMatching {
+public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Username");
+	String username=sc.next();
+	System.out.println("Enter Password");
+	String password=sc.next();
+	Class.forName("org.postgresql.Driver");
+	Connection conn=DriverManager.getConnection("jdbc:postgresql://localhost/student","postgres","password");
+    PreparedStatement stmt=conn.prepareStatement("Select * from user where username=? and password=?");
+    stmt.setString(1, username);
+    stmt.setString(2, password);
+    
+    ResultSet s=stmt.executeQuery();
+    if (s.next()) {
+    	System.out.println("Login success");
+    	
+    }else {
+    	System.out.println("incorrect username or password");
+    }
+    conn.close();
+}
+}
